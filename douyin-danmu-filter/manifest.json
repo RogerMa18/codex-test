@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "抖音直播弹幕关键词屏蔽",
+  "description": "在抖音网页版直播中自动屏蔽包含关键词的弹幕，支持自定义屏蔽词。",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://live.douyin.com/*",
+    "https://www.douyin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://live.douyin.com/*",
+        "https://www.douyin.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "弹幕屏蔽设置",
+    "default_popup": "popup.html"
+  }
+}
