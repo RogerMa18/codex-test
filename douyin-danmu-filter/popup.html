@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>弹幕屏蔽设置</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>弹幕屏蔽词</h1>
+      <p class="hint">每行一个关键词，也支持用逗号分隔。</p>
+      <textarea id="keywords" placeholder="例如：
+广告
+抽奖
+加微信"></textarea>
+      <button id="saveBtn" type="button">保存</button>
+      <p id="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
