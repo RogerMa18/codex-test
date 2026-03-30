@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Douyin Live Danmu Filter",
+  "description": "在抖音网页版直播中按关键词屏蔽弹幕，支持自定义屏蔽词。",
+  "version": "1.0.0",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://live.douyin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://live.douyin.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "弹幕屏蔽设置"
+  }
+}
